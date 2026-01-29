@@ -1,0 +1,13 @@
+/node_modules
+package-lock.*
+
+
+# Server files
+/server/node_modules
+/server/package-lock.*
+
+# Client files
+/client/node_modules
+/client/package-lock.*
+
+
