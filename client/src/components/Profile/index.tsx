@@ -1,17 +1,23 @@
-import { useState } from "react"
-import ProfilePopover from "./ProfilePopover"
+import { useState } from "react";
+import ProfilePopover from "./ProfilePopover";
+import { Avatar } from "@mui/material";
 
 const Profile = () => {
-    const [anchorEl, setAnchorEl] = useState<any>(null)
+  const [anchorEl, setAnchorEl] = useState<any>(null);
   return (
     <>
-    <div className="w-12 h-12 border-3 rounded-full cursor-pointer" onClick={e => setAnchorEl(e.currentTarget)}></div>
+      <div
+        className="w-12 h-12 border-3 rounded-full cursor-pointer"
+        onClick={(e) => setAnchorEl(e.currentTarget)}
+      >
+        <Avatar className="h-full w-full"/>
+      </div>
 
-    {
-        anchorEl && <ProfilePopover anchorEl={anchorEl} onClose={() => setAnchorEl(null)}/>
-    }
+      {anchorEl && (
+        <ProfilePopover anchorEl={anchorEl} onClose={() => setAnchorEl(null)} />
+      )}
     </>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

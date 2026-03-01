@@ -4,7 +4,7 @@ import { MdBrightness7, MdBrightness5 } from "react-icons/md";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
