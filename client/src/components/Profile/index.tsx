@@ -10,7 +10,7 @@ const Profile = () => {
         className="w-12 h-12 border-3 rounded-full cursor-pointer"
         onClick={(e) => setAnchorEl(e.currentTarget)}
       >
-        <Avatar className="h-full w-full"/>
+        <Avatar className="!h-full !w-full"/>
       </div>
 
       {anchorEl && (

@@ -1,11 +1,14 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import moment from "moment";
 
 interface ChartState {
   series: number[];
+  label: string[];
 }
 
 const initialState: ChartState = {
-  series: [1, 9, 3, 6, 8, 3, 4],
+  series: [],
+  label: [],
 };
 
 const chartSlice = createSlice({
@@ -13,11 +16,19 @@ const chartSlice = createSlice({
   initialState: initialState,
   reducers: {
     addData: (state, action: PayloadAction<number>) => {
-      state.series.splice(0, 1);
+      if(state.series.length > 10){
+        state.series.splice(0, 1);
+      }
       state.series.push(action.payload);
     },
+    addTimestamp: (state, action: PayloadAction<number>) => {
+      if(state.label.length > 10){
+        state.label.splice(0, 1);
+      }
+      state.label.push(moment(action.payload).format("hh:mm A"));
+    }
   },
 });
 
 export default chartSlice.reducer;
-export const { addData } = chartSlice.actions;
+export const { addData, addTimestamp } = chartSlice.actions;
