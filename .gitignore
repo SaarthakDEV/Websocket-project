@@ -5,9 +5,10 @@ package-lock.*
 # Server files
 /server/node_modules
 /server/package-lock.*
+/server/.env
 
 # Client files
 /client/node_modules
 /client/package-lock.*
-
+/client/.env
 

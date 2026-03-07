@@ -1,5 +1,5 @@
 import { Server } from "socket.io";
-import { generateStockValue } from "./helper/utils.js";
+import { generateStockValue } from "../helper/utils.js";
 
 // connection url: ws://localhost:3241
 const initializeSocket = (server) => {
