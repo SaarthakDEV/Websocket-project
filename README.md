@@ -15,3 +15,14 @@
 ## Redux toolkit
 - Chart prices, labels
 - Authentication information
+
+
+### Till now
+- [x] Charts flow completed
+- [x] New socket connection established on login
+- [x] In database socket id updated on connect and disconnect
+- [] fetch friends id
+- [] while messaging check if friend is online
+- [] Add friends
+- [] send message
+- [] receive message

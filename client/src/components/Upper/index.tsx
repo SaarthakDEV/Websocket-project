@@ -27,7 +27,6 @@ const Upper = () => {
           />
         )}
       </div>
-      <div className="bg-white dark:bg-red-500 p-4">fsdfsdfsd</div>
     </div>
   );
 };

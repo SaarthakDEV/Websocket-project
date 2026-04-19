@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const AuthWrapper = () => {
   const isAuthenticated = useSelector(
-    (state: any) => state.auth.isAuthenticated
+    (state: any) => state.auth.isLoggedIn
   );
 
   if (!isAuthenticated) {
