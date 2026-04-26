@@ -6,6 +6,8 @@ import { Suspense } from "react";
 import AuthWrapper from "./routes/AuthWrapper";
 import privateRoutes from "./routes/private";
 import NotFound from "./routes/NotFound";
+import { Provider } from "react-redux";
+import AuthStore from "./store";
 
 function App() {
   return <Routes>
@@ -23,7 +25,7 @@ function App() {
         ))}
       </Route>
 
-      <Route element={<AuthWrapper />}>
+      <Route element={<Provider store={AuthStore}><AuthWrapper /></Provider>}>
         {privateRoutes.map(({ path, component: Component }) => (
           <Route
             key={path}

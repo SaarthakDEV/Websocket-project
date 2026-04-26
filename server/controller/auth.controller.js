@@ -3,9 +3,8 @@ import pool from "../config/postgreSql.js";
 export const login = async (req, res) => {
   const { name, password } = req.body;
   const returnedUser = await pool.query("SELECT * FROM users WHERE name=$1", [
-    name,
+    name
   ]);
-  console.log(returnedUser.rows);
   if (returnedUser.rowCount === 0) {
     return res.sendStatus(404);
   }

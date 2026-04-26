@@ -21,8 +21,8 @@
 - [x] Charts flow completed
 - [x] New socket connection established on login
 - [x] In database socket id updated on connect and disconnect
-- [] fetch friends id
-- [] while messaging check if friend is online
-- [] Add friends
-- [] send message
-- [] receive message
+- [x] fetch friends id
+- [x] while messaging check if friend is online
+- [x] Add friends
+- [x] send message
+- [x] receive message

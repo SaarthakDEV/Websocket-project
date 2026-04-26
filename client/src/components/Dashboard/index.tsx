@@ -4,7 +4,6 @@ import ChartStore from "../../redux/store";
 import AuthStore from "../../store"
 import Lower from "../Lower"
 
-
 const Dashboard = () => {
   return (
     <>

@@ -10,7 +10,7 @@ type PrivateRoute = {
 
 const privateRoutes:PrivateRoute[] = [
     {
-        path: "/chat",
+        path: "/chat/:id",
         component: Chats
     },
     {

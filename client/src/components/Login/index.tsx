@@ -17,7 +17,6 @@ const Login = () => {
       password,
     });
     if(response.status === 200){
-      console.log(response)
       const { id, name, socketId, token } = response.data;
       dispatch(authActions.setUser({
         id,
